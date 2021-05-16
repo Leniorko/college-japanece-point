@@ -1,4 +1,5 @@
 .navigation {
+  z-index: 999999;
   border-bottom: 1px solid black;
   display: flex;
   justify-content: center;
@@ -21,6 +22,7 @@
 
 .navigation__list li {
   padding: 8px;
+  cursor: pointer;
 }
 
 .navigation__list li a {
