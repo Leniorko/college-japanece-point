@@ -1,0 +1,27 @@
+.cart-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.order-final {
+  display: flex;
+  flex-direction: row;
+  width: 320px;
+  justify-content: space-around;
+}
+
+.order-button {
+  background-color: #0085fc;
+  color: white;
+  outline: none;
+  border: none;
+  width: 100px;
+  border-radius: 10px;
+}
+
+.order-button:focus {
+  background-color: #0076dd;
+}

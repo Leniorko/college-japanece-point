@@ -1,7 +1,15 @@
 import "./GameCardWithDeleteButton.css";
 import "./GameCard.css";
 
-export default function GameCardWithDeleteButtonComponent() {
+interface CardProps {
+  gameName: string;
+  gameDeveloper: string;
+  gameDescription: string;
+  oldPrice: number;
+  newPrice: number;
+}
+
+export default function GameCardWithDeleteButtonComponent(props: CardProps) {
   return (
     <div className="game-card">
       <div className="img-container">
@@ -11,12 +19,14 @@ export default function GameCardWithDeleteButtonComponent() {
         />
       </div>
       <div className="game-card__content-container">
-        <div>{}</div>
-        <div className="game-card__developer">{}</div>
-        <div className="game-card__description">{}</div>
+        <div className="game-card__name">{props.gameName}</div>
+        <div className="game-card__developer">{props.gameDeveloper}</div>
+        <div className="game-card__description">{props.gameDescription}</div>
         <div className="price-container">
-          <div className="old-price">{}</div>
-          <div className="new-price">{}</div>
+          <div className={props.newPrice ? "old-price" : "current-price"}>
+            {props.oldPrice}
+          </div>
+          <div className="new-price">{props.newPrice}</div>
         </div>
       </div>
     </div>
