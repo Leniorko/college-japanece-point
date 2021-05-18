@@ -1,4 +1,4 @@
-import NavigationBarComponent from "../components/NavigationBar";
+import NavigationBarComponent from "../components/NavigationBar/NavigationBar";
 
 export default function ProfilePage() {
   return (

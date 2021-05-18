@@ -1,0 +1,14 @@
+.game-searchbar {
+  width: 100%;
+  display: block;
+  max-width: 863px;
+  height: 64px;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 20px;
+}
+
+.game-searchbar::placeholder {
+  text-align: center;
+  font-size: 20px;
+}

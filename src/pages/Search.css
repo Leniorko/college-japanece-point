@@ -1,0 +1,15 @@
+.search-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.game-list {
+  display: grid;
+  align-items: center;
+  max-width: 1248px;
+  grid-template-columns: repeat(3, max-content);
+  gap: 16px;
+}

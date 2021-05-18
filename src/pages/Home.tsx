@@ -1,8 +1,8 @@
 import { useState } from "react";
-import GameCardComponent from "../components/GameCard";
-import NavigationBarComponent from "../components/NavigationBar";
-import SecondHeadingComponent from "../components/SecondHeading";
-import SpotlightSlideshowComponent from "../components/SpotlightSlideshow";
+import GameCardComponent from "../components/GameCard/GameCard";
+import NavigationBarComponent from "../components/NavigationBar/NavigationBar";
+import SecondHeadingComponent from "../components/Headings/SecondHeading";
+import SpotlightSlideshowComponent from "../components/Slideshow/SpotlightSlideshow";
 import { gameDummyData } from "../gameDummyData";
 import "./Home.css";
 

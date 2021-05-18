@@ -1,0 +1,24 @@
+.slideshow-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.slideshow {
+  width: 720px;
+  position: relative;
+}
+
+.left-btn,
+.right-btn {
+  position: absolute;
+  top: 50%;
+}
+
+.left-btn:hover,
+.right-btn:hover {
+  cursor: pointer;
+}
+
+.right-btn {
+  right: 0;
+}
