@@ -1,3 +1,6 @@
+/* This css contains basic styles for GameCard
+It's should be importend in every GameCard */
+
 .game-card {
   width: 275px;
   border: 1px solid black;
@@ -11,14 +14,4 @@
   display: flex;
   width: 50%;
   justify-content: space-around;
-}
-
-.old-price {
-  text-decoration: line-through;
-  color: rgb(100, 100, 100);
-}
-
-.new-price,
-.current-price {
-  font-weight: bold;
 }

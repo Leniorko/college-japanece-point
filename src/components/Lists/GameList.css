@@ -1,0 +1,7 @@
+.game-list {
+  display: grid;
+  align-items: center;
+  max-width: 1248px;
+  grid-template-columns: repeat(3, max-content);
+  gap: 16px;
+}

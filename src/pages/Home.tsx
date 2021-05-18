@@ -1,5 +1,5 @@
 import { useState } from "react";
-import GameCardComponent from "../components/GameCard/GameCard";
+import GameCardWithPriceComponent from "../components/GameCard/GameCardWithPrice";
 import NavigationBarComponent from "../components/NavigationBar/NavigationBar";
 import SecondHeadingComponent from "../components/Headings/SecondHeading";
 import SpotlightSlideshowComponent from "../components/Slideshow/SpotlightSlideshow";
@@ -13,7 +13,7 @@ export default function HomePage() {
     .map((gameInfo) => {
       if (gameInfo.isInSale) {
         return (
-          <GameCardComponent
+          <GameCardWithPriceComponent
             key={gameInfo.gameName}
             gameDescription={gameInfo.gameDescription}
             gameDeveloper={gameInfo.developer}

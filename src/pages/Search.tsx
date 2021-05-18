@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import GameCardComponent from "../components/GameCard/GameCard";
+import GameCardWithPriceComponent from "../components/GameCard/GameCardWithPrice";
+import GameListComponent from "../components/Lists/GameList";
 import NavigationBarComponent from "../components/NavigationBar/NavigationBar";
 import GameSearchbarComponent from "../components/Searchbar/GameSearchbar";
 import { gameDummyData } from "../gameDummyData";
 import "./Search.css";
 
 export default function SearchPage() {
-  const [gamesDummyData, setGamesData] = useState(gameDummyData);
   const [searchString, setSearchString] = useState("");
   const [searchedGames, setSearchedGames] = useState(gameDummyData);
 
@@ -16,13 +16,14 @@ export default function SearchPage() {
       const lowerSearchString = searchString.toLowerCase();
 
       if (lowerGameName.includes(lowerSearchString)) return game;
+      return false;
     });
     setSearchedGames(filteredGames);
   }, [searchString]);
 
   let games = searchedGames.map((game) => {
     return (
-      <GameCardComponent
+      <GameCardWithPriceComponent
         key={game.gameName}
         gameName={game.gameName}
         gameDescription={game.gameDescription}
@@ -41,7 +42,7 @@ export default function SearchPage() {
           searchbarString={searchString}
           setSearchString={setSearchString}
         />
-        <div className="game-list">{games}</div>
+        <GameListComponent games={games} />
       </div>
     </div>
   );
