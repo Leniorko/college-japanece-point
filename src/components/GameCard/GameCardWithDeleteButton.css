@@ -1,0 +1,21 @@
+.img-container {
+  position: relative;
+}
+
+.delete-button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 64px;
+  height: 32px;
+  background-color: red;
+  border: none;
+}
+
+.delete-button:focus {
+  background-color: rgb(138, 0, 0);
+}
+
+.delete-button:hover {
+  cursor: pointer;
+}

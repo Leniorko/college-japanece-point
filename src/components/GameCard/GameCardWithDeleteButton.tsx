@@ -17,6 +17,7 @@ export default function GameCardWithDeleteButtonComponent(props: CardProps) {
           src={process.env.PUBLIC_URL + "/resources/placeholder_200x250.png"}
           alt=""
         />
+        <button className="delete-button">Delete</button>
       </div>
       <div className="game-card__content-container">
         <div className="game-card__name">{props.gameName}</div>

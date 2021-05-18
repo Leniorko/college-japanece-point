@@ -16,12 +16,11 @@
 .order-button {
   background-color: #0085fc;
   color: white;
-  outline: none;
   border: none;
   width: 100px;
   border-radius: 10px;
 }
 
 .order-button:focus {
-  background-color: #0076dd;
+  background-color: #025ead;
 }
