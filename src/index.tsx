@@ -11,7 +11,7 @@ import ProfilePage from "./pages/Profile";
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Switch>
         <Route exact path="/">
           <HomePage />
