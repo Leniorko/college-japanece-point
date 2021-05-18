@@ -1,3 +1,9 @@
+import NavigationBarComponent from "../components/NavigationBar";
+
 export default function CartPage() {
-  return <div></div>;
+  return (
+    <div>
+      <NavigationBarComponent />
+    </div>
+  );
 }

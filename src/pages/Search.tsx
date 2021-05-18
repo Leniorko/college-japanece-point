@@ -1,3 +1,9 @@
+import NavigationBarComponent from "../components/NavigationBar";
+
 export default function SearchPage() {
-  return <div></div>;
+  return (
+    <div>
+      <NavigationBarComponent />
+    </div>
+  );
 }

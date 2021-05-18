@@ -1,0 +1,23 @@
+.game-card {
+  max-width: 300px;
+  border: 1px solid black;
+}
+
+.game-card__content-container {
+  padding: 8px;
+}
+
+.price-container {
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: rgb(100, 100, 100);
+}
+
+.new-price {
+  font-weight: bold;
+}

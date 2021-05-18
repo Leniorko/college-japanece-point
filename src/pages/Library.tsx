@@ -1,3 +1,9 @@
+import NavigationBarComponent from "../components/NavigationBar";
+
 export default function LibraryPage() {
-  return <div></div>;
+  return (
+    <div>
+      <NavigationBarComponent />
+    </div>
+  );
 }
