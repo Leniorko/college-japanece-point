@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import "./NavigationBar.css";
 
+// TODO Make it transform in mobile into hamburger menu
+
 export default function NavigationBarComponent() {
   return (
     <nav className="navigation">

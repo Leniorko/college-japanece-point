@@ -1,6 +1,7 @@
 import "./GameList.css";
 
 // TODO There is an erro in Library.tsx fix it.
+// TODO Make it wrap in mobile
 
 interface GameListProps {
   games: any;

@@ -1,6 +1,7 @@
 export let gameDummyData = [
   {
     gameName: "Final Fantasy",
+    id: "ff",
     developer: "Square Enix",
     gameDescription: "Some game description",
     gamePrice: 3000,
@@ -14,6 +15,7 @@ export let gameDummyData = [
   },
   {
     gameName: "Naruto",
+    id: "n",
     developer: "Bandai namco",
     gameDescription: "Some game description",
     gamePrice: 4000,
@@ -29,6 +31,7 @@ export let gameDummyData = [
   },
   {
     gameName: "Dragon's Dogma",
+    id: "dd",
     developer: "Campcom",
     gameDescription: "Some game description",
     gamePrice: 1500,
@@ -43,6 +46,7 @@ export let gameDummyData = [
   {
     gameName: "Dragon Quest",
     developer: "Square Enix",
+    id: "dq",
     gameDescription: "Some game description",
     gamePrice: 2500,
     currency: "руб",
@@ -55,6 +59,7 @@ export let gameDummyData = [
   },
   {
     gameName: "Doki Doki Literature club",
+    id: "ddlc",
     developer: "Team Salvato",
     gameDescription: "Some game description",
     gamePrice: 0,
@@ -70,6 +75,7 @@ export let gameDummyData = [
   },
   {
     gameName: "Fire Emblem",
+    id: "fe",
     developer: "Nintendo",
     gameDescription: "Some game description",
     gamePrice: 5000,

@@ -8,6 +8,7 @@ import SearchPage from "./pages/Search";
 import LibraryPage from "./pages/Library";
 import CartPage from "./pages/Cart";
 import ProfilePage from "./pages/Profile";
+import GamePage from "./pages/Game";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,9 +17,11 @@ ReactDOM.render(
         <Route exact path="/">
           <HomePage />
         </Route>
+        <Route path="/search/:gameId" component={GamePage} />
         <Route path="/search">
           <SearchPage />
         </Route>
+        <Route path="/library/:gameId" component={GamePage} />
         <Route path="/library">
           <LibraryPage />
         </Route>
