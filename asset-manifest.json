@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/college-japanece-point/static/css/main.7f11514a.chunk.css",
-    "main.js": "/college-japanece-point/static/js/main.ffb5653b.chunk.js",
-    "main.js.map": "/college-japanece-point/static/js/main.ffb5653b.chunk.js.map",
-    "runtime-main.js": "/college-japanece-point/static/js/runtime-main.de07cf90.js",
-    "runtime-main.js.map": "/college-japanece-point/static/js/runtime-main.de07cf90.js.map",
-    "static/js/2.97905088.chunk.js": "/college-japanece-point/static/js/2.97905088.chunk.js",
-    "static/js/2.97905088.chunk.js.map": "/college-japanece-point/static/js/2.97905088.chunk.js.map",
-    "static/js/3.39e7ae60.chunk.js": "/college-japanece-point/static/js/3.39e7ae60.chunk.js",
-    "static/js/3.39e7ae60.chunk.js.map": "/college-japanece-point/static/js/3.39e7ae60.chunk.js.map",
+    "main.css": "/college-japanece-point/static/css/main.f8f143ed.chunk.css",
+    "main.js": "/college-japanece-point/static/js/main.39799fee.chunk.js",
+    "main.js.map": "/college-japanece-point/static/js/main.39799fee.chunk.js.map",
+    "runtime-main.js": "/college-japanece-point/static/js/runtime-main.9c74c142.js",
+    "runtime-main.js.map": "/college-japanece-point/static/js/runtime-main.9c74c142.js.map",
+    "static/js/2.52e1ef56.chunk.js": "/college-japanece-point/static/js/2.52e1ef56.chunk.js",
+    "static/js/2.52e1ef56.chunk.js.map": "/college-japanece-point/static/js/2.52e1ef56.chunk.js.map",
+    "static/js/3.41298f28.chunk.js": "/college-japanece-point/static/js/3.41298f28.chunk.js",
+    "static/js/3.41298f28.chunk.js.map": "/college-japanece-point/static/js/3.41298f28.chunk.js.map",
     "index.html": "/college-japanece-point/index.html",
-    "static/css/main.7f11514a.chunk.css.map": "/college-japanece-point/static/css/main.7f11514a.chunk.css.map",
-    "static/js/2.97905088.chunk.js.LICENSE.txt": "/college-japanece-point/static/js/2.97905088.chunk.js.LICENSE.txt"
+    "static/css/main.f8f143ed.chunk.css.map": "/college-japanece-point/static/css/main.f8f143ed.chunk.css.map",
+    "static/js/2.52e1ef56.chunk.js.LICENSE.txt": "/college-japanece-point/static/js/2.52e1ef56.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.de07cf90.js",
-    "static/js/2.97905088.chunk.js",
-    "static/css/main.7f11514a.chunk.css",
-    "static/js/main.ffb5653b.chunk.js"
+    "static/js/runtime-main.9c74c142.js",
+    "static/js/2.52e1ef56.chunk.js",
+    "static/css/main.f8f143ed.chunk.css",
+    "static/js/main.39799fee.chunk.js"
   ]
 }
