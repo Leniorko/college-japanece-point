@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/college-japanece-point/static/css/main.f8f143ed.chunk.css",
-    "main.js": "/college-japanece-point/static/js/main.39799fee.chunk.js",
-    "main.js.map": "/college-japanece-point/static/js/main.39799fee.chunk.js.map",
+    "main.js": "/college-japanece-point/static/js/main.06cadd18.chunk.js",
+    "main.js.map": "/college-japanece-point/static/js/main.06cadd18.chunk.js.map",
     "runtime-main.js": "/college-japanece-point/static/js/runtime-main.9c74c142.js",
     "runtime-main.js.map": "/college-japanece-point/static/js/runtime-main.9c74c142.js.map",
     "static/js/2.52e1ef56.chunk.js": "/college-japanece-point/static/js/2.52e1ef56.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.9c74c142.js",
     "static/js/2.52e1ef56.chunk.js",
     "static/css/main.f8f143ed.chunk.css",
-    "static/js/main.39799fee.chunk.js"
+    "static/js/main.06cadd18.chunk.js"
   ]
 }
