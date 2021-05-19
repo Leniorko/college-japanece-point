@@ -19,6 +19,9 @@ export default function NavigationBarComponent() {
         <Link to="/library">
           <li className="navigation__item4">Library</li>
         </Link>
+        <Link to="/search/ff">
+          <li>To game placeholder</li>
+        </Link>
         <Link to="/cart" className="navigation__item5">
           <li>Cart Icon</li>
         </Link>
