@@ -8,7 +8,7 @@ import {
 import SecondHeadingComponent from "../components/Headings/SecondHeading";
 import NavigationBarComponent from "../components/NavigationBar/NavigationBar";
 import SpotlightSlideshowComponent from "../components/Slideshow/SpotlightSlideshow";
-import { gameDummyData } from "../gameDummyData";
+import { gameDummyData, gameDummyDataForGamePage } from "../gameDummyData";
 import "./Game.css";
 
 // TODO Split file into components
@@ -32,7 +32,7 @@ export default function GamePage(props: RouteComponentProps) {
       return newArr;
     }, Array<string>())
   );
-  const [games, setGames] = useState(gameDummyData);
+  const [games, setGames] = useState(gameDummyDataForGamePage);
 
   if (!gamesInPlace.includes(curLoc.gameId)) {
     return <Redirect to={`/${currentPlace}`} />;
@@ -41,7 +41,7 @@ export default function GamePage(props: RouteComponentProps) {
     <div className="game-page">
       <NavigationBarComponent />
       <div className="game-page-content">
-        <SecondHeadingComponent headingText="PLACEHOLDER GAME NAME" />
+        <SecondHeadingComponent headingText={games[curLoc.gameId].gameName} />
         <img
           src={process.env.PUBLIC_URL + "/resources/placeholder_250x250png"}
           alt=""
@@ -53,10 +53,7 @@ export default function GamePage(props: RouteComponentProps) {
 
         <SecondHeadingComponent headingText="Description" />
         <p className="game-page__description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae ducimus
-          asperiores nulla necessitatibus recusandae nobis architecto
-          voluptatibus sequi rem veniam cumque vero iste vel, velit fuga non eos
-          dignissimos repellat.
+          {games[curLoc.gameId].gameDescription}
         </p>
       </div>
     </div>
