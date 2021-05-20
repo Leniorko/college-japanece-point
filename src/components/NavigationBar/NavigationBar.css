@@ -34,3 +34,12 @@
 .navigation__item5 {
   margin-left: auto;
 }
+
+.active {
+  background-color: gray;
+}
+
+/* Clss used to deactivate background for logo */
+.deactive {
+  background-color: white;
+}

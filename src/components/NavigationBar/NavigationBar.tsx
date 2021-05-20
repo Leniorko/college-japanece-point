@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./NavigationBar.css";
 
 // TODO Make it transform in mobile into hamburger menu
@@ -7,27 +7,28 @@ export default function NavigationBarComponent() {
   return (
     <nav className="navigation">
       <ul className="navigation__list">
-        <Link to="/">
+        <NavLink className="deactive" exact to="/">
           <li className="navigation__item1">Japanece Point</li>
-        </Link>
-        <Link to="/">
+        </NavLink>
+        <NavLink activeClassName="active" exact to="/">
           <li className="navigation__item2">Home</li>
-        </Link>
-        <Link to="/search">
+        </NavLink>
+        <NavLink activeClassName="active" to="/search">
           <li className="navigation__item3">Search for games</li>
-        </Link>
-        <Link to="/library">
+        </NavLink>
+        <NavLink activeClassName="active" to="/library">
           <li className="navigation__item4">Library</li>
-        </Link>
-        <Link to="/search/ff">
-          <li>To game placeholder</li>
-        </Link>
-        <Link to="/cart" className="navigation__item5">
+        </NavLink>
+        <NavLink
+          activeClassName="active"
+          to="/cart"
+          className="navigation__item5"
+        >
           <li>Cart Icon</li>
-        </Link>
-        <Link to="/profile">
+        </NavLink>
+        <NavLink activeClassName="active" to="/profile">
           <li className="navigation__item6">User Icon</li>
-        </Link>
+        </NavLink>
       </ul>
     </nav>
   );

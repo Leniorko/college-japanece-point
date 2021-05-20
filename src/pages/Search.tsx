@@ -24,6 +24,7 @@ export default function SearchPage() {
   let games = searchedGames.map((game) => {
     return (
       <GameCardWithPriceComponent
+        gameId={game.id}
         key={game.gameName}
         gameName={game.gameName}
         gameDescription={game.gameDescription}

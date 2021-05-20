@@ -15,6 +15,7 @@ export default function HomePage() {
         return (
           <GameCardWithPriceComponent
             key={gameInfo.gameName}
+            gameId={gameInfo.id}
             gameDescription={gameInfo.gameDescription}
             gameDeveloper={gameInfo.developer}
             gameName={gameInfo.gameName}
@@ -25,8 +26,6 @@ export default function HomePage() {
       }
     })
     .filter((value) => value !== undefined);
-
-  console.log(gamesInSale);
 
   return (
     <div className="main-page">

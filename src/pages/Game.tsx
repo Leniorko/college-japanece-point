@@ -1,5 +1,10 @@
 import { useEffect, useState } from "react";
-import { Redirect, RouteComponentProps } from "react-router";
+import {
+  Redirect,
+  RouteComponentProps,
+  useLocation,
+  useParams,
+} from "react-router";
 import SecondHeadingComponent from "../components/Headings/SecondHeading";
 import NavigationBarComponent from "../components/NavigationBar/NavigationBar";
 import SpotlightSlideshowComponent from "../components/Slideshow/SpotlightSlideshow";
@@ -9,34 +14,27 @@ import "./Game.css";
 // TODO Split file into components
 // TODO Change layout a bit. (Look into EGS)
 
+interface GamePageParam {
+  gameId: string;
+}
+
 export default function GamePage(props: RouteComponentProps) {
+  const curLoc: GamePageParam = useParams();
+
   const [currentPlace, setCurrentPlace] = useState(
     props.match.path.split("/")[1]
   );
   const [gamesInPlace, setGamesInPlace] = useState(
-    gameDummyData
-      .filter((game) => {
-        if (currentPlace === "library") {
-          return game.bought;
-        } else if (currentPlace === "search") {
-          return true;
-        }
-        return false;
-      })
-      .reduce((prev, cur) => {
-        let curId = cur.id;
-        let newArr = prev;
-        newArr.push(curId);
-        return newArr;
-      }, Array<string>())
+    gameDummyData.reduce((prev, cur) => {
+      let curId = cur.id;
+      let newArr = prev;
+      newArr.push(curId);
+      return newArr;
+    }, Array<string>())
   );
-  useEffect(() => {
-    console.log((props.match.params as { gameId: string })["gameId"]);
-  }, []);
+  const [games, setGames] = useState(gameDummyData);
 
-  if (
-    !gamesInPlace.includes((props.match.params as { gameId: string })["gameId"])
-  ) {
+  if (!gamesInPlace.includes(curLoc.gameId)) {
     return <Redirect to={`/${currentPlace}`} />;
   }
   return (

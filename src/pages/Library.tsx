@@ -31,6 +31,7 @@ export default function LibraryPage() {
             gameDescription={game.gameDescription}
             gameDeveloper={game.developer}
             hoursInGame={game.hoursInGame!!}
+            gameId={game.id}
           />
         );
     })

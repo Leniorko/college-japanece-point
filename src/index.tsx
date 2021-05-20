@@ -31,6 +31,7 @@ ReactDOM.render(
         <Route path="/profile">
           <ProfilePage />
         </Route>
+        <Route path="/:gameId" component={GamePage} />
       </Switch>
     </BrowserRouter>
   </React.StrictMode>,

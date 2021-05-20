@@ -4,6 +4,8 @@ It's should be importend in every GameCard */
 .game-card {
   width: 275px;
   border: 1px solid black;
+  text-decoration: none;
+  color: black;
 }
 
 .game-card__content-container {

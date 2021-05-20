@@ -35,6 +35,7 @@ export default function CartPage() {
         gameName={game.gameName}
         newPrice={game.gameSalePrice!!}
         oldPrice={game.gamePrice}
+        key={game.gameName}
       />
     );
   });
