@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/college-japanece-point/static/css/main.f8f143ed.chunk.css",
-    "main.js": "/college-japanece-point/static/js/main.06cadd18.chunk.js",
-    "main.js.map": "/college-japanece-point/static/js/main.06cadd18.chunk.js.map",
+    "main.css": "/college-japanece-point/static/css/main.4c448148.chunk.css",
+    "main.js": "/college-japanece-point/static/js/main.747e8269.chunk.js",
+    "main.js.map": "/college-japanece-point/static/js/main.747e8269.chunk.js.map",
     "runtime-main.js": "/college-japanece-point/static/js/runtime-main.9c74c142.js",
     "runtime-main.js.map": "/college-japanece-point/static/js/runtime-main.9c74c142.js.map",
-    "static/js/2.52e1ef56.chunk.js": "/college-japanece-point/static/js/2.52e1ef56.chunk.js",
-    "static/js/2.52e1ef56.chunk.js.map": "/college-japanece-point/static/js/2.52e1ef56.chunk.js.map",
+    "static/js/2.4ea22949.chunk.js": "/college-japanece-point/static/js/2.4ea22949.chunk.js",
+    "static/js/2.4ea22949.chunk.js.map": "/college-japanece-point/static/js/2.4ea22949.chunk.js.map",
     "static/js/3.41298f28.chunk.js": "/college-japanece-point/static/js/3.41298f28.chunk.js",
     "static/js/3.41298f28.chunk.js.map": "/college-japanece-point/static/js/3.41298f28.chunk.js.map",
     "index.html": "/college-japanece-point/index.html",
-    "static/css/main.f8f143ed.chunk.css.map": "/college-japanece-point/static/css/main.f8f143ed.chunk.css.map",
-    "static/js/2.52e1ef56.chunk.js.LICENSE.txt": "/college-japanece-point/static/js/2.52e1ef56.chunk.js.LICENSE.txt"
+    "static/css/main.4c448148.chunk.css.map": "/college-japanece-point/static/css/main.4c448148.chunk.css.map",
+    "static/js/2.4ea22949.chunk.js.LICENSE.txt": "/college-japanece-point/static/js/2.4ea22949.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.9c74c142.js",
-    "static/js/2.52e1ef56.chunk.js",
-    "static/css/main.f8f143ed.chunk.css",
-    "static/js/main.06cadd18.chunk.js"
+    "static/js/2.4ea22949.chunk.js",
+    "static/css/main.4c448148.chunk.css",
+    "static/js/main.747e8269.chunk.js"
   ]
 }
