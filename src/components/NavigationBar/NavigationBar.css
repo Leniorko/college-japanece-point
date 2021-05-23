@@ -1,18 +1,23 @@
+:root {
+  --primary-light: #2a2a2a;
+  --primary-dark: #0b0b0b;
+  --active-link: #6900d1;
+}
+
 .navigation {
   z-index: 999999;
-  border-bottom: 1px solid black;
   display: flex;
   justify-content: center;
   width: 100%;
   position: sticky;
   top: 0;
-  background: white;
+  background: var(--primary-light);
 }
 
 .navigation__list {
   max-width: 1248px;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-grow: 1;
   display: flex;
   list-style: none;
@@ -21,10 +26,25 @@
 }
 
 .navigation__list a {
-  padding: 8px;
+  padding: 16px;
+  box-sizing: border-box;
+  font-size: 20px;
   cursor: pointer;
   text-decoration: none;
-  color: black;
+  color: white;
+  background-clip: border-box;
+}
+
+.navigation__logo-container {
+  height: fit-content;
+  height: 60px;
+}
+
+.navigation__cart-container {
+  height: 24px;
+}
+.navigation__user-container {
+  height: 24px;
 }
 
 .navigation__list a:hover {
@@ -33,13 +53,20 @@
 
 .navigation__item5 {
   margin-left: auto;
+  height: 100%;
 }
 
 .active {
-  background-color: gray;
+  background-color: var(--active-link);
 }
 
 /* Clss used to deactivate background for logo */
 .deactive {
-  background-color: white;
+  background-color: var(--primary-light);
+  padding: 0 !important;
+  height: 100%;
+}
+
+.cart {
+  width: 100%;
 }

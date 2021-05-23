@@ -6,22 +6,36 @@ import GameSearchbarComponent from "../components/Searchbar/GameSearchbar";
 import { gameDummyData } from "../gameDummyData";
 import "./Search.css";
 
+export interface GameInterface {
+  gameName: string;
+  id: string;
+  developer: string;
+  gameDescription: string;
+  gamePrice: number;
+  currency: string;
+  isInSale: boolean;
+  gameSalePrice: number | null;
+  bought: boolean;
+  hoursInGame: number | null;
+  images: Array<string>;
+  videos: Array<string>;
+}
+
 export default function SearchPage() {
   const [searchString, setSearchString] = useState("");
-  const [searchedGames, setSearchedGames] = useState(gameDummyData);
+  const [fetchedGames, setFetchedGames] = useState<Array<GameInterface>>([]);
 
   useEffect(() => {
-    const filteredGames = gameDummyData.filter((game) => {
-      const lowerGameName = game.gameName.toLowerCase();
-      const lowerSearchString = searchString.toLowerCase();
-
-      if (lowerGameName.includes(lowerSearchString)) return game;
-      return false;
-    });
-    setSearchedGames(filteredGames);
+    fetch("https://japanese-point.herokuapp.com/api/v1/search", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: `{"gameName": {"$regex": ".*${searchString}.*"  }}`,
+    })
+      .then((responce) => responce.json())
+      .then((data) => setFetchedGames(data));
   }, [searchString]);
 
-  let games = searchedGames.map((game) => {
+  let games = fetchedGames!!.map((game) => {
     return (
       <GameCardWithPriceComponent
         gameId={game.id}
