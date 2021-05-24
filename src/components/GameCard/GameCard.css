@@ -6,6 +6,7 @@ It's should be importend in every GameCard */
   border: 1px solid black;
   text-decoration: none;
   color: black;
+  background-color: white;
 }
 
 .game-card__content-container {

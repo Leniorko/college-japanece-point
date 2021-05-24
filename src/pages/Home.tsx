@@ -5,6 +5,7 @@ import SecondHeadingComponent from "../components/Headings/SecondHeading";
 import SpotlightSlideshowComponent from "../components/Slideshow/SpotlightSlideshow";
 import { gameDummyData } from "../gameDummyData";
 import "./Home.css";
+import HomeSlideshowComponent from "../components/Slideshow/HomeSlideshow";
 
 export default function HomePage() {
   const [gameData, setGameData] = useState(gameDummyData);
@@ -29,15 +30,17 @@ export default function HomePage() {
 
   return (
     <div className="main-page">
-      <NavigationBarComponent />
-      <div className="slideshow-layout">
-        <SpotlightSlideshowComponent />
-      </div>
-      <SecondHeadingComponent headingText="Скидки" />
-      <div className="main-page__sales-wrapper">
-        <div className="main-page__sales-spotlight-list">
-          {/* It will take only firs four games */}
-          {gamesInSale.slice(0, 4)}
+      <div className="main-page__content">
+        <NavigationBarComponent />
+        <div className="slideshow-layout">
+          <HomeSlideshowComponent />
+        </div>
+        <SecondHeadingComponent headingText="Скидки" />
+        <div className="main-page__sales-wrapper">
+          <div className="main-page__sales-spotlight-list">
+            {/* It will take only firs four games */}
+            {gamesInSale.slice(0, 4)}
+          </div>
         </div>
       </div>
     </div>

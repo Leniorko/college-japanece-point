@@ -1,0 +1,16 @@
+.home-slideshow {
+  width: 1248px;
+  display: flex;
+}
+
+.home-slideshow__active {
+  max-width: 70%;
+  padding: 16px 0 16px 16px;
+  background: #2a2a2a;
+}
+
+.home-slideshow__sidebar {
+  display: flex;
+  flex-direction: column;
+  max-width: 30%;
+}
