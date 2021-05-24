@@ -1,16 +1,29 @@
 /* This css contains basic styles for GameCard
 It's should be importend in every GameCard */
 
+/* TODO change fonts */
+/* TODO move some properties to GameCardWithPrice */
 .game-card {
   width: 275px;
   border: 1px solid black;
   text-decoration: none;
   color: black;
-  background-color: white;
+  background-color: #2a2a2a;
 }
 
 .game-card__content-container {
   padding: 8px;
+  color: white;
+}
+
+.game-card__discount-percent {
+  background: #6900d1;
+  border-radius: 8px;
+  padding: 6px;
+}
+
+.game-card__developer {
+  color: #a6a6a6;
 }
 
 .price-container {

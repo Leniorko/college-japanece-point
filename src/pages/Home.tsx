@@ -35,11 +35,13 @@ export default function HomePage() {
         <div className="slideshow-layout">
           <HomeSlideshowComponent />
         </div>
-        <SecondHeadingComponent headingText="Скидки" />
-        <div className="main-page__sales-wrapper">
-          <div className="main-page__sales-spotlight-list">
-            {/* It will take only firs four games */}
-            {gamesInSale.slice(0, 4)}
+        <div className="main-page__sales-block">
+          <SecondHeadingComponent headingText="Скидки" />
+          <div className="main-page__sales-wrapper">
+            <div className="main-page__sales-spotlight-list">
+              {/* It will take only firs four games */}
+              {gamesInSale.slice(0, 4)}
+            </div>
           </div>
         </div>
       </div>

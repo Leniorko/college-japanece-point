@@ -2,6 +2,7 @@ import "./HomeSlideshowSidebarItem.css";
 
 interface SidebarItemInterface {
   gameName: string;
+  activeSlideName: string;
 }
 
 export default function HomeSlideshowSidebarItemComponent(
@@ -17,7 +18,13 @@ export default function HomeSlideshowSidebarItemComponent(
         />
         <p className="home-slideshow-sidebar-item__name">{props.gameName}</p>
       </div>
-      <div className="home-slideshow-sidebar-item__progressbar"></div>
+      <div
+        className={
+          props.gameName == props.activeSlideName
+            ? "home-slideshow-sidebar-item__progressbar-active"
+            : "home-slideshow-sidebar-item__progressbar"
+        }
+      ></div>
     </div>
   );
 }

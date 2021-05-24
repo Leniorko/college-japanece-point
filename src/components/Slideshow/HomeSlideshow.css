@@ -1,16 +1,19 @@
 .home-slideshow {
   width: 1248px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: auto;
+  grid-template-areas: "active sidebar";
 }
 
 .home-slideshow__active {
-  max-width: 70%;
   padding: 16px 0 16px 16px;
   background: #2a2a2a;
+  grid-area: "active";
 }
 
 .home-slideshow__sidebar {
   display: flex;
   flex-direction: column;
-  max-width: 30%;
+  grid-area: "sidebar";
 }

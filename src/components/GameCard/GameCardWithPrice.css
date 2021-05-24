@@ -1,9 +1,11 @@
 .old-price {
   text-decoration: line-through;
-  color: rgb(100, 100, 100);
+  color: #838383;
+  padding: 6px;
 }
 
 .new-price,
 .current-price {
   font-weight: bold;
+  padding: 6px;
 }

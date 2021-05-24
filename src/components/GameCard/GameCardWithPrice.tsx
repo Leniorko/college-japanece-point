@@ -31,6 +31,16 @@ export default function GameCardWithPriceComponent(props: CardProps) {
         <div className="game-card__developer">{props.gameDeveloper}</div>
         <div className="game-card__description">{props.gameDescription}</div>
         <div className="price-container">
+          {props.newPrice ? (
+            <div className="game-card__discount-percent">
+              {new Intl.NumberFormat("en-GB", {
+                style: "percent",
+              }).format(props.newPrice / props.oldPrice)}
+            </div>
+          ) : (
+            <></>
+          )}
+
           <div className={props.newPrice ? "old-price" : "current-price"}>
             {props.oldPrice}
           </div>
