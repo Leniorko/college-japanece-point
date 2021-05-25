@@ -1,15 +1,10 @@
 import { useEffect, useState } from "react";
-import {
-  Redirect,
-  RouteComponentProps,
-  useLocation,
-  useParams,
-} from "react-router";
+import { RouteComponentProps, useParams } from "react-router";
 import SecondHeadingComponent from "../components/Headings/SecondHeading";
 import NavigationBarComponent from "../components/NavigationBar/NavigationBar";
 import SpotlightSlideshowComponent from "../components/Slideshow/SpotlightSlideshow";
-import { gameDummyData, gameDummyDataForGamePage } from "../gameDummyData";
 import "./Game.css";
+import { GameInterface } from "./Search";
 
 // TODO Split file into components
 // TODO Change layout a bit. (Look into EGS)
@@ -20,28 +15,25 @@ interface GamePageParam {
 
 export default function GamePage(props: RouteComponentProps) {
   const curLoc: GamePageParam = useParams();
+  const [gameData, setGameData] = useState<Array<GameInterface>>();
 
-  const [currentPlace, setCurrentPlace] = useState(
-    props.match.path.split("/")[1]
-  );
-  const [gamesInPlace, setGamesInPlace] = useState(
-    gameDummyData.reduce((prev, cur) => {
-      let curId = cur.id;
-      let newArr = prev;
-      newArr.push(curId);
-      return newArr;
-    }, Array<string>())
-  );
-  const [games, setGames] = useState(gameDummyDataForGamePage);
+  useEffect(() => {
+    fetch("https://japanese-point.herokuapp.com/api/v1/search", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: `{"id": "${curLoc.gameId}"}`,
+    })
+      .then((response) => response.json())
+      .then((data) => setGameData(data));
+  }, []);
 
-  if (!gamesInPlace.includes(curLoc.gameId)) {
-    return <Redirect to={`/${currentPlace}`} />;
-  }
   return (
     <div className="game-page">
       <NavigationBarComponent />
       <div className="game-page-content">
-        <SecondHeadingComponent headingText={games[curLoc.gameId].gameName} />
+        <SecondHeadingComponent
+          headingText={gameData ? gameData[0].gameName : ""}
+        />
         <img
           src={process.env.PUBLIC_URL + "/resources/placeholder_250x250png"}
           alt=""
@@ -53,7 +45,7 @@ export default function GamePage(props: RouteComponentProps) {
 
         <SecondHeadingComponent headingText="Description" />
         <p className="game-page__description">
-          {games[curLoc.gameId].gameDescription}
+          {gameData ? gameData[0].gameDescription : ""}
         </p>
       </div>
     </div>
