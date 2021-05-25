@@ -3,7 +3,6 @@ import GameCardWithPriceComponent from "../components/GameCard/GameCardWithPrice
 import GameListComponent from "../components/Lists/GameList";
 import NavigationBarComponent from "../components/NavigationBar/NavigationBar";
 import GameSearchbarComponent from "../components/Searchbar/GameSearchbar";
-import { gameDummyData } from "../gameDummyData";
 import "./Search.css";
 
 export interface GameInterface {

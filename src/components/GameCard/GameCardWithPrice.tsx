@@ -14,7 +14,7 @@ interface CardProps {
 export default function GameCardWithPriceComponent(props: CardProps) {
   const currentPage = useLocation();
 
-  if (currentPage.pathname.length == 1) {
+  if (currentPage.pathname.length === 1) {
     currentPage.pathname = "";
   }
 
@@ -29,11 +29,11 @@ export default function GameCardWithPriceComponent(props: CardProps) {
       <div className="game-card__content-container">
         <div className="game-card__name">{props.gameName}</div>
         <div className="game-card__developer">{props.gameDeveloper}</div>
-        <div className="game-card__description">{props.gameDescription}</div>
+        {/* <div className="game-card__description">{props.gameDescription}</div> */}
         <div className="price-container">
           {props.newPrice ? (
             <div className="game-card__discount-percent">
-              {new Intl.NumberFormat("en-GB", {
+              {"-" + new Intl.NumberFormat("en-GB", {
                 style: "percent",
               }).format(props.newPrice / props.oldPrice)}
             </div>
@@ -42,9 +42,9 @@ export default function GameCardWithPriceComponent(props: CardProps) {
           )}
 
           <div className={props.newPrice ? "old-price" : "current-price"}>
-            {props.oldPrice}
+            {props.oldPrice === 0 ? "Free": props.oldPrice + " rub"}
           </div>
-          <div className="new-price">{props.newPrice}</div>
+          {props.newPrice ? <div className="new-price">{props.newPrice + " rub"}</div> : <></>}
         </div>
       </div>
     </Link>

@@ -46,9 +46,9 @@ export default function CartPage() {
       <div className="cart-page-container">
         <GameListComponent games={games} />
         <div className="order-final">
-          <p className="total-price">
+          <p className="cart-page__price-container">
             {"Total price: "}
-            <span>{totalPrice}</span>
+            <span className="cart-page__price">{totalPrice}</span>
           </p>
           <button className="order-button">ORDER</button>
         </div>

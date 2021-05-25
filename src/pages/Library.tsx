@@ -3,7 +3,6 @@ import GameCardWithHoursComponent from "../components/GameCard/GameCardWithHours
 import GameListComponent from "../components/Lists/GameList";
 import NavigationBarComponent from "../components/NavigationBar/NavigationBar";
 import GameSearchbarComponent from "../components/Searchbar/GameSearchbar";
-import { gameDummyData } from "../gameDummyData";
 import "./Library.css";
 import { GameInterface } from "./Search";
 
@@ -23,14 +22,13 @@ export default function LibraryPage() {
   }, [searchString]);
 
   let games = fetchedGames.map((game) => {
-    if (game.bought)
       return (
         <GameCardWithHoursComponent
           key={game.gameName}
           gameName={game.gameName}
           gameDescription={game.gameDescription}
           gameDeveloper={game.developer}
-          hoursInGame={game.hoursInGame!!}
+          minutesInGame={game.hoursInGame!!}
           gameId={game.id}
         />
       );

@@ -7,20 +7,31 @@
 }
 
 .order-final {
+  padding-top: 32px;
   display: flex;
   flex-direction: row;
-  width: 320px;
+  width: 500px;
   justify-content: space-around;
 }
 
 .order-button {
   background-color: #0085fc;
   color: white;
+  font-size: 24px;
   border: none;
-  width: 100px;
+  width: 200px;
   border-radius: 10px;
+}
+
+.order-button:hover {
+  cursor: pointer;
 }
 
 .order-button:focus {
   background-color: #025ead;
+}
+
+.cart-page__price-container {
+  color: white;
+  font-size: 24px;
 }

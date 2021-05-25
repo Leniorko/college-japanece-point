@@ -9,11 +9,15 @@ It's should be importend in every GameCard */
   text-decoration: none;
   color: black;
   background-color: #2a2a2a;
+  position: relative;
 }
 
 .game-card__content-container {
   padding: 8px;
   color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .game-card__discount-percent {
@@ -28,6 +32,4 @@ It's should be importend in every GameCard */
 
 .price-container {
   display: flex;
-  width: 50%;
-  justify-content: space-around;
 }

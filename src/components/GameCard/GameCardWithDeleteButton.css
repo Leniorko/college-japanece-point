@@ -2,14 +2,41 @@
   position: relative;
 }
 
+.game-card:hover .delete-button {
+  display: block;
+}
+
+.game-card__overlay {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.5;
+}
+
+.game-card:hover .game-card__overlay {
+  display: block;
+  color: black;
+}
+
+.game-card:hover .game-card__img {
+  opacity: 0.5;
+  color: black;
+}
+
+.delete-button {
+  color: black;
+}
+
 .delete-button {
   position: absolute;
   top: 16px;
   right: 16px;
-  width: 64px;
+  width: 32px;
   height: 32px;
-  background-color: red;
   border: none;
+  display: none;
 }
 
 .delete-button:focus {
