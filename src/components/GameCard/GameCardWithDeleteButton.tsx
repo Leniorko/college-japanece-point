@@ -7,6 +7,7 @@ interface CardProps {
   gameDescription: string;
   oldPrice: number;
   newPrice: number;
+  vertical: Array<string>;
 }
 
 export default function GameCardWithDeleteButtonComponent(props: CardProps) {
@@ -15,11 +16,7 @@ export default function GameCardWithDeleteButtonComponent(props: CardProps) {
       <div className="game-card__overlay"></div>
 
       <div className="img-container">
-        <img
-          className="game-card__img"
-          src={process.env.PUBLIC_URL + "/resources/placeholder_200x250.png"}
-          alt=""
-        />
+        <img className="game-card__img" src={props.vertical[0]} alt="" />
         <object
           className="delete-button"
           data={process.env.PUBLIC_URL + "/resources/delete.svg"}

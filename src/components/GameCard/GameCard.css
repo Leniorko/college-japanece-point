@@ -12,6 +12,12 @@ It's should be importend in every GameCard */
   position: relative;
 }
 
+.game-card__name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .game-card__content-container {
   padding: 8px;
   color: white;

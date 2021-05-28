@@ -9,3 +9,8 @@
   font-weight: bold;
   padding: 6px;
 }
+
+.img-container {
+  max-height: 340px;
+  overflow: hidden;
+}

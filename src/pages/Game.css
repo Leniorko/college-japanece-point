@@ -2,17 +2,68 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: white;
 }
 
-.game-page-content {
+.game-page__content {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
-  margin-top: 16px;
+  margin-top: 64px;
   max-width: 1248px;
 }
 
-.game-page__description {
+.game-page__nav-line {
+  display: flex;
+  width: 100%;
+  gap: 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #cbcbcb;
+}
+
+.game-page__come-back {
+  display: flex;
+}
+
+.game-page__text-separator {
+  width: 1px;
+  background-color: #cbcbcb;
+}
+
+.game-page__back-text {
+  display: block;
+  margin: 0;
+  color: #7c7c7c;
+}
+
+.game-page__game-title {
+  font-size: 36px;
+  align-self: flex-start;
+}
+
+.game-page__main-info {
+  display: flex;
+}
+
+.game-page__buy-info {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin-left: auto;
+  gap: 16px;
+}
+
+.game-page__buy-button {
+  display: block;
+  background: #d1004b;
   color: white;
+  border: none;
+  padding: 16px 0px;
+  border-radius: 15px;
+}
+
+.game-page__buy-button:hover {
+  cursor: pointer;
+  background: #9c0039;
 }

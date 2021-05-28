@@ -20,7 +20,6 @@ export default function HomeSlideshowComponent() {
       .then((response) => response.json())
       .then((data) => {
         setGamesInSpotlight(data);
-        // setActiveGame(data[currentActiveGameCounter].gameName);
       });
   }, []);
 
@@ -36,6 +35,7 @@ export default function HomeSlideshowComponent() {
       <HomeSlideshowSidebarItemComponent
         key={game.gameName}
         gameName={game.gameName}
+        vertical={game.images.vertical}
         activeSlideName={currentActiveGame}
       />
     );
@@ -44,7 +44,7 @@ export default function HomeSlideshowComponent() {
   return (
     <div className="home-slideshow">
       <div className="home-slideshow__active">
-        <HomeSlideshowItemComponent />
+        <HomeSlideshowItemComponent activeGameName={currentActiveGame} />
       </div>
       <div className="home-slideshow__sidebar">{spotlightGames}</div>
     </div>

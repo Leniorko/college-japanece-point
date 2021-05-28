@@ -16,7 +16,11 @@ export interface GameInterface {
   gameSalePrice: number | null;
   bought: boolean;
   hoursInGame: number | null;
-  images: Array<string>;
+  images: {
+    vertical: Array<string>;
+    horizontal: Array<string>;
+    logo: string;
+  };
   videos: Array<string>;
 }
 
@@ -28,7 +32,7 @@ export default function SearchPage() {
     fetch("https://japanese-point.herokuapp.com/api/v1/search", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: `{"gameName": {"$regex": ".*${searchString}.*"  }}`,
+      body: `{"gameName": {"$regex": ".*${searchString}.*", "$options" : "i"  }}`,
     })
       .then((responce) => responce.json())
       .then((data) => setFetchedGames(data));
@@ -44,6 +48,7 @@ export default function SearchPage() {
         gameDeveloper={game.developer}
         newPrice={game.gameSalePrice!!}
         oldPrice={game.gamePrice}
+        vertical={game.images.vertical}
       />
     );
   });

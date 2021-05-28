@@ -14,7 +14,7 @@ export default function LibraryPage() {
     fetch("https://japanese-point.herokuapp.com/api/v1/search", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: `{"gameName": {"$regex": ".*${searchString}.*"  },
+      body: `{"gameName": {"$regex": ".*${searchString}.*" , "$options" : "i"  },
               "bought": true}`,
     })
       .then((responce) => responce.json())
@@ -22,16 +22,17 @@ export default function LibraryPage() {
   }, [searchString]);
 
   let games = fetchedGames.map((game) => {
-      return (
-        <GameCardWithHoursComponent
-          key={game.gameName}
-          gameName={game.gameName}
-          gameDescription={game.gameDescription}
-          gameDeveloper={game.developer}
-          minutesInGame={game.hoursInGame!!}
-          gameId={game.id}
-        />
-      );
+    return (
+      <GameCardWithHoursComponent
+        key={game.gameName}
+        gameName={game.gameName}
+        gameDescription={game.gameDescription}
+        gameDeveloper={game.developer}
+        minutesInGame={game.hoursInGame!!}
+        gameId={game.id}
+        vertical={game.images.vertical}
+      />
+    );
   });
 
   return (

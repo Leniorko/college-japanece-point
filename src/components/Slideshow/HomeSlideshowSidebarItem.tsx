@@ -3,6 +3,7 @@ import "./HomeSlideshowSidebarItem.css";
 interface SidebarItemInterface {
   gameName: string;
   activeSlideName: string;
+  vertical: Array<string>;
 }
 
 export default function HomeSlideshowSidebarItemComponent(
@@ -12,7 +13,7 @@ export default function HomeSlideshowSidebarItemComponent(
     <div className="home-slideshow-sidebar-item">
       <div className="home-slideshow-sidebar-item__content">
         <img
-          src={process.env.PUBLIC_URL + "/resources/placeholder_250x250.png"}
+          src={props.vertical[0]}
           alt=""
           className="home-slideshow-sidebar-item__img"
         />
