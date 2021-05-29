@@ -4,6 +4,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: white;
+}
+
+.banner__ending {
+  animation: loadingEnd 3s;
+}
+
+@keyframes loadingEnd {
+  0% {
+    clip-path: circle(100%);
+  }
+
+  100% {
+    clip-path: circle(0%);
+  }
 }
 
 .banner {

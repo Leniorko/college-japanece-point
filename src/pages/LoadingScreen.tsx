@@ -1,8 +1,16 @@
 import "./LoadingScreen.css";
 
-export default function LoadingScreenPage() {
+interface LoadingScreenProps {
+  isEnding: boolean;
+}
+
+export default function LoadingScreenPage(props: LoadingScreenProps) {
   return (
-    <div className="banner-container">
+    <div
+      className={
+        props.isEnding ? "banner-container banner__ending" : "banner-container"
+      }
+    >
       <div className="banner">
         <div className="banner__top">
           <p className="banner__text banner__top1">JAPANESE POINT</p>
