@@ -9,31 +9,11 @@ import LibraryPage from "./pages/Library";
 import CartPage from "./pages/Cart";
 import ProfilePage from "./pages/Profile";
 import GamePage from "./pages/Game";
+import App from "./App";
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
-      <Switch>
-        <Route exact path="/">
-          <HomePage />
-        </Route>
-        <Route path="/search/:gameId" component={GamePage} />
-        <Route path="/search">
-          <SearchPage />
-        </Route>
-        <Route path="/library/:gameId" component={GamePage} />
-        <Route path="/library">
-          <LibraryPage />
-        </Route>
-        <Route path="/cart">
-          <CartPage />
-        </Route>
-        <Route path="/profile">
-          <ProfilePage />
-        </Route>
-        <Route path="/:gameId" component={GamePage} />
-      </Switch>
-    </BrowserRouter>
+    <App />
   </React.StrictMode>,
   document.getElementById("root")
 );
