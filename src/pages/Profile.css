@@ -1,3 +1,7 @@
+.profile-page {
+  min-height: 100vh;
+}
+
 .profile-page__flex-container {
   display: flex;
   justify-content: center;

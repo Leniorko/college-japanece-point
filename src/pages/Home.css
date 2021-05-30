@@ -1,3 +1,7 @@
+.main-page {
+  min-height: 100vh;
+}
+
 .slideshow-layout {
   margin-top: 32px;
   display: flex;

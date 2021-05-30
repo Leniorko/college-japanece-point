@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   color: white;
+  min-height: 100vh;
 }
 
 .game-page__content {
