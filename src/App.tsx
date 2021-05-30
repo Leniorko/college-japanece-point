@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import FooterComponent from "./components/Footers/Footer";
 import CartPage from "./pages/Cart";
 import GamePage from "./pages/Game";
 import HomePage from "./pages/Home";
@@ -50,6 +51,7 @@ export default function App() {
         </Route>
         <Route path="/:gameId" component={GamePage} />
       </Switch>
+      <FooterComponent />
     </BrowserRouter>
   );
 }
