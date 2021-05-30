@@ -55,7 +55,7 @@ export default function SearchPage() {
   });
 
   return (
-    <div>
+    <div className="search-page">
       <NavigationBarComponent />
       <div className="search-page-container">
         <GameSearchbarComponent
