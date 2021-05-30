@@ -16,6 +16,7 @@ export interface GameInterface {
   gameSalePrice: number | null;
   bought: boolean;
   hoursInGame: number | null;
+  isInCart: boolean;
   images: {
     vertical: Array<string>;
     horizontal: Array<string>;

@@ -25,7 +25,7 @@ export default function GamePage(props: RouteComponentProps) {
     })
       .then((response) => response.json())
       .then((data) => setGameData(data));
-  }, []);
+  }, [gameData]);
 
   return (
     <div className="game-page">
@@ -86,7 +86,26 @@ export default function GamePage(props: RouteComponentProps) {
                 <></>
               )}
             </div>
-            <button className="game-page__buy-button">Add to cart</button>
+            {gameData?.[0].isInCart ? (
+              <button className="game-page__buy-button">Already in cart</button>
+            ) : (
+              <button
+                className="game-page__buy-button"
+                onClick={() => {
+                  fetch("https://japanese-point.herokuapp.com/api/v1/update/", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: `{"id": "${curLoc.gameId}", "isInCart":true}`,
+                  }).then((data) => {
+                    let curData = gameData;
+                    curData![0].isInCart = true;
+                    setGameData(curData);
+                  });
+                }}
+              >
+                Add to cart
+              </button>
+            )}
           </div>
         </div>
       </div>

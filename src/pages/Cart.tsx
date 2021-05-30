@@ -8,37 +8,31 @@ import { GameInterface } from "./Search";
 
 export default function CartPage() {
   const [totalPrice, setTotalPrice] = useState(0);
-  const [gamesInCart, setGamesInCart] = useState(
-    gameDummyData.filter((game) => {
-      if (!game.bought) {
-        return game;
-      }
-      return false;
-    })
-  );
-
   const [fetchedGames, setFetchedGames] = useState<Array<GameInterface>>();
+  const [magicCounter, setMagicCouner] = useState(0);
 
   useEffect(() => {
     fetch("https://japanese-point.herokuapp.com/api/v1/search", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: `{"bought": true }`,
+      body: `{"isInCart": true }`,
     })
       .then((responce) => responce.json())
       .then((data) => setFetchedGames(data));
-  }, []);
+  }, [magicCounter]);
 
   useEffect(() => {
     let totalCost = 0;
-    totalCost = gamesInCart.reduce((previous, current) => {
-      let curPrice = current.isInSale
-        ? current.gameSalePrice!!
-        : current.gamePrice!!;
-      return previous + curPrice!!;
-    }, 0);
+    totalCost = fetchedGames
+      ? fetchedGames.reduce((previous, current) => {
+          let curPrice = current.isInSale
+            ? current.gameSalePrice!!
+            : current.gamePrice!!;
+          return previous + curPrice!!;
+        }, 0)
+      : 0;
     setTotalPrice(totalCost);
-  }, [gamesInCart]);
+  }, [fetchedGames]);
 
   const games = fetchedGames?.map((game) => {
     return (
@@ -50,6 +44,9 @@ export default function CartPage() {
         oldPrice={game.gamePrice}
         key={game.gameName}
         vertical={game.images.vertical}
+        gameId={game.id}
+        magicCounter={magicCounter}
+        magiCounterSet={setMagicCouner}
       />
     );
   });
