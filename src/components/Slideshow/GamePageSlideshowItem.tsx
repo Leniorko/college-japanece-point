@@ -13,7 +13,7 @@ export default function GamePageSlideshowItemComponent(props: SlideProps) {
       {props.isVideo ? (
         <GamePageSlideshowItemYoutubeComponent video={props.gameName} />
       ) : (
-        <img src={props.gameName}></img>
+        <img src={props.gameName} alt={props.gameName + " Screenshot"}></img>
       )}
     </div>
   );

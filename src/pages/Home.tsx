@@ -2,8 +2,6 @@ import { useState } from "react";
 import GameCardWithPriceComponent from "../components/GameCard/GameCardWithPrice";
 import NavigationBarComponent from "../components/NavigationBar/NavigationBar";
 import SecondHeadingComponent from "../components/Headings/SecondHeading";
-import GamePageSlideshowComponent from "../components/Slideshow/GamePageSlideshow";
-import { gameDummyData } from "../gameDummyData";
 import "./Home.css";
 import HomeSlideshowComponent from "../components/Slideshow/HomeSlideshow";
 import { useEffect } from "react";

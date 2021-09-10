@@ -13,7 +13,7 @@ interface CardProps {
 }
 
 export default function GameCardWithHoursComponent(props: CardProps) {
-  const [totalPlayedParsed, setTotalPlayed] = useState({
+  const [totalPlayedParsed] = useState({
     minutes: props.minutesInGame % 60,
     hours: (props.minutesInGame / 60) >> 0,
     days: (props.minutesInGame / 1440) >> 0,

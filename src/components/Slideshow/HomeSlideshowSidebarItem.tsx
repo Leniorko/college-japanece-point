@@ -21,11 +21,10 @@ export default function HomeSlideshowSidebarItemComponent(
       </div>
       <div
         className={
-          props.gameName == props.activeSlideName
+          props.gameName === props.activeSlideName
             ? "home-slideshow-sidebar-item__progressbar-active"
             : "home-slideshow-sidebar-item__progressbar"
-        }
-      ></div>
+        }></div>
     </div>
   );
 }

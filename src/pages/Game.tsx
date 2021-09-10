@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { RouteComponentProps, useParams } from "react-router";
-import SecondHeadingComponent from "../components/Headings/SecondHeading";
 import NavigationBarComponent from "../components/NavigationBar/NavigationBar";
 import GamePageSlideshowComponent from "../components/Slideshow/GamePageSlideshow";
 import "./Game.css";
@@ -25,7 +24,7 @@ export default function GamePage(props: RouteComponentProps) {
     })
       .then((response) => response.json())
       .then((data) => setGameData(data));
-  }, [gameData]);
+  }, [gameData, curLoc.gameId]);
 
   return (
     <div className="game-page">
@@ -72,8 +71,7 @@ export default function GamePage(props: RouteComponentProps) {
               <div
                 className={
                   gameData?.[0].gameSalePrice ? "old-price" : "current-price"
-                }
-              >
+                }>
                 {gameData?.[0].gamePrice === 0
                   ? "Free"
                   : gameData?.[0].gamePrice + " rub"}
@@ -101,8 +99,7 @@ export default function GamePage(props: RouteComponentProps) {
                     curData![0].isInCart = true;
                     setGameData(curData);
                   });
-                }}
-              >
+                }}>
                 Add to cart
               </button>
             )}

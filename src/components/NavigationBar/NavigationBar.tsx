@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./NavigationBar.css";
 
 // TODO Make it transform in mobile into hamburger menu
@@ -28,8 +28,7 @@ export default function NavigationBarComponent() {
         <NavLink
           activeClassName="active"
           to="/cart"
-          className="navigation__item5"
-        >
+          className="navigation__item5">
           <li className="navigation__cart-container">
             <img
               className="cart"

@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import GameCardWithDeleteButtonComponent from "../components/GameCard/GameCardWithDeleteButton";
 import GameListComponent from "../components/Lists/GameList";
 import NavigationBarComponent from "../components/NavigationBar/NavigationBar";
-import { gameDummyData } from "../gameDummyData";
 import "./Cart.css";
 import { GameInterface } from "./Search";
 

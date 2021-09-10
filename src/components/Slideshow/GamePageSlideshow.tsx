@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import GamePageSlideshowItemComponent from "./GamePageSlideshowItem";
 import "./GamePageSlideshow.css";
-import { JsxElement } from "typescript";
 
 interface GamePageSlideshowProps {
   horizontal: Array<string>;
@@ -25,7 +24,7 @@ export default function GamePageSlideshowComponent(
     let sslides = fetchedSlides?.map((name) => {
       return (
         <GamePageSlideshowItemComponent
-          isVideo={fetchedSlides[0] == name}
+          isVideo={fetchedSlides[0] === name}
           key={name}
           gameName={name}
           active={active}
@@ -64,8 +63,7 @@ export default function GamePageSlideshowComponent(
                 className={name === active ? "active-dot" : "notactive-dot"}
                 onClick={() => {
                   setActive(fetchedSlides?.[index]);
-                }}
-              ></div>
+                }}></div>
             );
           })}
         </div>
