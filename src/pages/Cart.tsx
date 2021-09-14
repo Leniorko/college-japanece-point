@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import GameCardWithDeleteButtonComponent from "../components/GameCard/GameCardWithDeleteButton";
 import GameListComponent from "../components/Lists/GameList";
 import NavigationBarComponent from "../components/NavigationBar/NavigationBar";
+import { useGetGamesInCart } from "../redux/cartSlice";
 import "./Cart.css";
 import { GameInterface } from "./Search";
 
@@ -32,6 +33,9 @@ export default function CartPage() {
       : 0;
     setTotalPrice(totalCost);
   }, [fetchedGames]);
+
+  const aaa = useGetGamesInCart("");
+  console.log(aaa);
 
   const games = fetchedGames?.map((game) => {
     return (
